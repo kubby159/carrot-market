@@ -60,7 +60,7 @@ export default function Enter() {
               </div>
             ) : null}
           </div>
-          <button>
+          <button className="mt-5 bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium focus:ring-2 focus: ring-offset-2 focus:ring-orange-500 focus:outline-none">
             {method === "email" ? "Get login link" : null}
             {method === "phone" ? "Get one-time password" : null}
           </button>
