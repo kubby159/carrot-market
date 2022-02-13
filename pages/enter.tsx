@@ -10,7 +10,7 @@ export default function Enter() {
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
   return (
-    <div className="mt-16">
+    <div className="mt-16 px-4">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
       <div className="mt-8">
         <div className="flex flex-col items-center">
@@ -40,13 +40,19 @@ export default function Enter() {
             </button>
           </div>
         </div>
-        <form>
-          <label>
+        <form className="flex flex-col mt-8">
+          <label className="text-sm font-medium text-gray-700">
             {method === "email" ? "Email address" : null}
             {method === "phone" ? "Phone number" : null}
           </label>
-          <div>
-            {method === "email" ? <input type="email" required /> : null}
+          <div className="mt-1">
+            {method === "email" ? (
+              <input
+                type="email"
+                className="appearance-none w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                required
+              />
+            ) : null}
             {method === "phone" ? (
               <div>
                 <span>+82</span>
