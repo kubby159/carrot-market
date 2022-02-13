@@ -54,9 +54,15 @@ export default function Enter() {
               />
             ) : null}
             {method === "phone" ? (
-              <div>
-                <span>+82</span>
-                <input type="number" required />
+              <div className="flex rounded-md shadow-sm">
+                <span className="flex items-center justify-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 select-none">
+                  +82
+                </span>
+                <input
+                  type="number"
+                  className="appearance-none w-full py-2 px-3 border border-gray-300 rounded-md rounded-l-none shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                  required
+                />
               </div>
             ) : null}
           </div>
